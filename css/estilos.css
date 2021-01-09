@@ -1,0 +1,296 @@
+/*-----------------------------------*/
+/* estilos generales */
+/*-----------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+body {
+  background: #DEDEDE;
+  color: #000;
+}
+.contenedor {
+  display: block;
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+.contenedor h1 {
+  display: block;
+  width: 100%;
+  font-size: 58px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+/*-----------------------------------*/
+/* estilos del encabezado */
+/*-----------------------------------*/
+.contenedor header {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.contenedor header h2 {
+  display: inline-block;
+  margin-right: 20px;
+}
+.contenedor header button {
+  display: none;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 100px;
+  transition: all .3S ease;
+  cursor: pointer;
+}
+.contenedor header button.active {
+  display: inline-block;
+}
+.contenedor header button i {
+  margin-right: 10px;
+}
+.contenedor header button.agregar {
+  background: #0074D9;
+}
+.contenedor header button.modificar {
+  background: #00BB2D;
+}
+.contenedor header button.eliminar {
+  background: #FF0000;
+}
+.contenedor header button:hover {
+  background: #ccc;
+}
+/*-----------------------------------*/
+/* estilos de la tabla */
+/*-----------------------------------*/
+.contenedor .contenedor_tabla {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+}
+.contenedor .contenedor_tabla table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+.contenedor .contenedor_tabla table tr td {
+  background: #fff;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.contenedor .contenedor_tabla table tr td input[type="checkbox"] {
+  display: none;
+}
+.contenedor .contenedor_tabla table tr td label {
+  background: none;
+  color: #fff;
+  font-size: 10px;
+  padding: 1px;
+  border: 3px solid #0074D9;
+  cursor: pointer;
+}
+.contenedor .contenedor_tabla table tr td input[type="checkbox"]:checked + label {
+  background: #0074D9;
+}
+.contenedor .contenedor_tabla table tr td p {
+  display: block;
+  color: #fff;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+}
+.contenedor .contenedor_tabla table tr td p.admin {
+  background: #0074D9;
+}
+.contenedor .contenedor_tabla table tr td p.read {
+  background: #00BB2D;
+}
+/*-----------------------------------*/
+/* estilos del contenedor_alerta */
+/*-----------------------------------*/
+.contenedor_alerta {
+  display: flex;
+  width: 100%;
+  background: none;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+}
+.contenedor_alerta.active {
+  transform: translateY(0);
+}
+/*-----------------------------------*/
+/* estilos del formulario */
+/*-----------------------------------*/
+.contenedor_alerta .formulario {
+  display: none;
+  width: 90%;
+  max-width: 500px;
+  background: #fff;
+  color: #000;
+  padding: 10px;
+  border: none;
+  border-top: 3px solid #0074D9;
+  border-radius: 4px;
+}
+.contenedor_alerta .formulario.active {
+  display: inline-block;
+}
+.contenedor_alerta .formulario .group {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.contenedor_alerta .formulario .group label,
+.contenedor_alerta .formulario .group input,
+.contenedor_alerta .formulario .group select {
+  display: block;
+  width: 100%;
+}
+.contenedor_alerta .formulario .group label {
+  margin-bottom: 5px;
+}
+.contenedor_alerta .formulario .group input,
+.contenedor_alerta .formulario .group select {
+  font-size: 15px;
+  padding: 5px;
+}
+.contenedor_alerta .formulario .group input[disabled] {
+  background: #e0e0e0;
+  border: 1px solid #ccc;
+  cursor: default;
+}
+/*-----------------------------------*/
+/* estilos del group password */
+/*-----------------------------------*/
+.contenedor_alerta .formulario .group.password {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contenedor_alerta .formulario .group.password .col {
+  width: 50%;
+}
+.contenedor_alerta .formulario .group.password .col:nth-child(1) {
+  padding: 0 5px 0 0;
+}
+.contenedor_alerta .formulario .group.password .col:nth-child(2) {
+  padding: 0 0 0 5px;
+}
+/*-----------------------------------*/
+/* estilos del group buttons */
+/*-----------------------------------*/
+.contenedor_alerta .formulario .group.buttons {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+}
+.contenedor_alerta .formulario .group.buttons button {
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 100px;
+  transition: all .3S ease;
+  cursor: pointer;
+}
+.contenedor_alerta .formulario .group.buttons button i {
+  margin-right: 10px;
+}
+.contenedor_alerta .formulario .group.buttons button:nth-child(1) {
+  margin-right: 5px;
+}
+.contenedor_alerta .formulario .group.buttons button:nth-child(2) {
+  background: #FF0000;
+  margin-left: 5px;
+}
+.contenedor_alerta .formulario .group.buttons button.frm_agregar {
+  background: #0074D9;
+}
+.contenedor_alerta .formulario .group.buttons button.frm_modificar {
+  background: #00BB2D;
+}
+.contenedor_alerta .formulario .group.buttons button:hover {
+  background: #ccc;
+}
+/*-----------------------------------*/
+/* estilos de error del formulario */
+/*-----------------------------------*/
+.contenedor_alerta .formulario .group.error label,
+.contenedor_alerta .formulario .group .col.error label {
+  color: #FF0000;
+}
+.contenedor_alerta .formulario .group.error input,
+.contenedor_alerta .formulario .group.error select,
+.contenedor_alerta .formulario .group .col.error input {
+  border: 1px solid #FF0000;
+}
+/*-----------------------------------*/
+/* estilos de la alerta */
+/*-----------------------------------*/
+.contenedor_alerta .alerta {
+  display: none;
+  width: 90%;
+  max-width: 700px;
+  background: #fff;
+  color: #000;
+  padding: 10px;
+  border: none;
+  border-top: 3px solid #0074D9;
+  border-radius: 4px;
+}
+.contenedor_alerta .alerta.active {
+  display: inline-block;
+}
+.contenedor_alerta .alerta .group:nth-child(1) {
+  display: flex;
+  width: 100%;
+  font-size: 18px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.contenedor_alerta .alerta .group:nth-child(1) i {
+  margin-right: 10px;
+}
+.contenedor_alerta .alerta .group:nth-child(2) {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor_alerta .alerta .group:nth-child(2) button {
+  display: inline-block;
+  background: #0074D9;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  transition: all .3S ease;
+  cursor: pointer;
+}
+.contenedor_alerta .alerta .group:nth-child(2) button i {
+  margin-right: 10px;
+}
+.contenedor_alerta .alerta .group:nth-child(2) button:nth-child(1) {
+  margin-right: 5px;
+}
+.contenedor_alerta .alerta .group:nth-child(2) button:nth-child(2) {
+  background: #FF0000;
+  margin-left: 5px;
+}
+.contenedor_alerta .alerta .group:nth-child(2) button:hover {
+  background: #ccc;
+}
